@@ -12,7 +12,7 @@ pip install -r requirements.txt
 data/
 ├── 1/
 │   ├── image  #Original image
-│   ├── hessian_region  #Hessian Prompt
+│   ├── hessian_prompt  #Hessian Prompt
 │   └── label  #Label
 ```
 
