@@ -11,7 +11,6 @@ print("Image data shape:", image_data.shape)  # 打印图像数据的形状
 print("Label data shape:", label_data.shape)  # 打印标签数据的形状
 
 model = ours_model(32, 128, 128, 2)
-model.summary()
 
 callbacks_list=[
     keras.callbacks.EarlyStopping(
@@ -37,4 +36,5 @@ callbacks_list=[
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), loss=combined_weighted_loss(dice_weight=0.6, cldice_weight=0.1, bce_weight=0.3, weight=1.0, iters=25, alpha=0.5), metrics=['accuracy'])
 
 history = model.fit(image_data, label_data, batch_size=4, epochs=30, shuffle=True, validation_split=0.2,
+
                  callbacks=callbacks_list)
