@@ -1,0 +1,31 @@
+## HP-3DNSM
+
+This repository contains the code for the paper "HP-3DNSM: A dedicated 3D deep learning model for neuron segmentation based on Hessian prompt". We have uploaded the environment configuration files, the training code, and the inference code demonstrated with example cases. The remaining code, pretrained weights, and partial data will be publicly released once the manuscript is accepted.
+
+### Environment configuration
+
+pip install -r requirements.txt
+
+### Data Architecture Example
+
+```
+data/
+├── 1/
+│   ├── image  #Original image
+│   ├── hessian_region  #Hessian Prompt
+│   └── label  #Label
+```
+
+### Model training
+
+python train.py
+
+### Pretrained Model
+
+The pretrained model weights will be made publicly available soon.
+
+### Sample Inference
+
+This example performs prediction using a subset of the data and outputs a generated prediction image.
+
+python demo.py
